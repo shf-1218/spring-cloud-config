@@ -1,0 +1,15 @@
+server:
+  port: 1201
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/shf-1218/config-repo.git
+          search-paths: repo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1001/eureka/
